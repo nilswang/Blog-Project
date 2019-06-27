@@ -10,7 +10,7 @@ def global_setting(request):
 
 def index(request):
     try:
-        file = open('sss.txt', 'r')
+        return render(request, 'index.html', locals())
     except Exception as e:
         logger.error(e)
-    return render(request, 'index.html', locals())
+    

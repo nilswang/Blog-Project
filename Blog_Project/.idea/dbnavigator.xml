@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="f51394e3-8203-45f0-90ee-beb9e25af067">
-        <schema name="main" object-types="index, table, view, column, constraint, dataset trigger" />
+        <schema name="main" object-types="column, table, view, constraint, index, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
@@ -35,13 +35,41 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/blog_user" />
+      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/blog_tag" />
+      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/auth_user" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="f51394e3-8203-45f0-90ee-beb9e25af067" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_blog" active-filter-id="" />
+    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_user" active-filter-id="6004d7d1-be07-42e7-84cd-df8cf6a606d1">
+      <filter id="6004d7d1-be07-42e7-84cd-df8cf6a606d1" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.auth_user" active-filter-id="6a3cb05b-3f8b-416e-8871-f20db0cf6f72">
+      <filter id="6a3cb05b-3f8b-416e-8871-f20db0cf6f72" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_blog" active-filter-id="35d6b793-16da-45f1-bf05-d2228dd069f2">
+      <filter id="35d6b793-16da-45f1-bf05-d2228dd069f2" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_tag" active-filter-id="3657782b-2a1f-48a0-95af-8872fc83d909">
+      <filter id="3657782b-2a1f-48a0-95af-8872fc83d909" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_category" active-filter-id="b65a34dd-6697-4258-95d7-6a671ee8e40d">
+      <filter id="b65a34dd-6697-4258-95d7-6a671ee8e40d" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
