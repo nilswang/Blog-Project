@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="f51394e3-8203-45f0-90ee-beb9e25af067">
-        <schema name="main" object-types="column, table, view, constraint, index, dataset trigger" />
+        <schema name="main" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -35,11 +35,7 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/blog_user" />
-      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/blog_tag" />
-      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/auth_user" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="f51394e3-8203-45f0-90ee-beb9e25af067" />
@@ -55,6 +51,11 @@
         <condition column="id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_article_tag" active-filter-id="06aea4c3-e834-4da5-9587-fb5606dfc0a9">
+      <filter id="06aea4c3-e834-4da5-9587-fb5606dfc0a9" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_blog" active-filter-id="35d6b793-16da-45f1-bf05-d2228dd069f2">
       <filter id="35d6b793-16da-45f1-bf05-d2228dd069f2" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
@@ -62,6 +63,16 @@
     </filter-actions>
     <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_tag" active-filter-id="3657782b-2a1f-48a0-95af-8872fc83d909">
       <filter id="3657782b-2a1f-48a0-95af-8872fc83d909" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_comment" active-filter-id="aaadfafb-a12e-4e95-ba4a-517ac189a3fa">
+      <filter id="aaadfafb-a12e-4e95-ba4a-517ac189a3fa" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_article" active-filter-id="bbd19312-75a3-44f2-a8ea-0d3854104732">
+      <filter id="bbd19312-75a3-44f2-a8ea-0d3854104732" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>

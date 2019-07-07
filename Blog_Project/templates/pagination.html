@@ -1,0 +1,16 @@
+<div class="pagination">
+    <span class="step-links">
+        {% if article_list.has_previous %}
+            <a href="?page={{ article_list.previous_page_number }} {% if request.GET.year %}&year={{ request.GET.year }} {% endif %} {% if request.GET.month %}&month={{ request.GET.month }} {% endif %}">上一页</a>
+        {% endif %}
+
+        <span class="current">
+            {{ article_list.number }} of {{ article_list.paginator.num_pages }}.
+        </span>
+
+        {% if article_list.has_next %}
+            <a href="?page={{ article_list.next_page_number }} {% if request.GET.year %}&year={{ request.GET.year }} {% endif %} {% if request.GET.month %}&month={{ request.GET.month }} {% endif %}">下一页</a>
+            <a href="?page={{ article_list.paginator.num_pages }}">最后一页 &raquo;</a>
+        {% endif %}
+    </span>
+</div>

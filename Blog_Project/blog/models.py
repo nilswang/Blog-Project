@@ -25,7 +25,7 @@ unique：True表示唯一
 # 采用的继承方式扩展用户信息
 class User(AbstractUser):
     # 在继承的基础上新增4个字段
-    avatar = models.ImageField(upload_to='avatar/%Y/%m', default='avatar/default.png', max_length=200, blank=True,
+    avatar = models.ImageField(upload_to='avatar/%Y/%m/%d', default='avatar/default.png', max_length=200, blank=True,
                                null=True, verbose_name='用户头像')
     qq = models.CharField(max_length=20, blank=True, null=True, verbose_name='QQ号码')
     mobile = models.CharField(max_length=11, blank=True, null=True, unique=True, verbose_name='手机号码')
@@ -41,7 +41,7 @@ class User(AbstractUser):
         ordering = ['-id']
 
     # 对象的字符串表达式(unicode格式)
-    def __unicode__(self):
+    def __str__(self):
         return self.username
 
 
@@ -53,7 +53,7 @@ class Tag(models.Model):
         verbose_name = '标签'
         verbose_name_plural = verbose_name
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -67,7 +67,7 @@ class Category(models.Model):
         verbose_name_plural = verbose_name
         ordering = ['index', 'id']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -106,7 +106,7 @@ class Article(models.Model):
         verbose_name_plural = verbose_name
         ordering = ['-date_publish']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
 
@@ -126,7 +126,7 @@ class Comment(models.Model):
         verbose_name = '评论'
         verbose_name_plural = verbose_name
 
-    def __unicode__(self):
+    def __str__(self):
         return str(self.id)
 
 
@@ -143,7 +143,7 @@ class Links(models.Model):
         verbose_name_plural = verbose_name
         ordering = ['index', 'id']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
 
@@ -161,5 +161,5 @@ class Ad(models.Model):
         verbose_name_plural = verbose_name
         ordering = ['index', 'id']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
