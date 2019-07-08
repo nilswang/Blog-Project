@@ -19,6 +19,6 @@ from blog.view import index, archive
 
 
 urlpatterns = [
-    url(r'nils/', index, name='index'),
-    url(r'archive/', archive, name='archive')
+    url(r'^$', index, name='index'),
+    url(r'^archive/$', archive, name='archive')
 ]

@@ -1,6 +1,5 @@
 from django.contrib import admin
 from blog.models import *
-
 class CommentAdmin(admin.ModelAdmin):
     class Media:
         js = (
@@ -15,7 +14,7 @@ class CommentAdmin(admin.ModelAdmin):
            }],
         ['Advance',
          {'classes': ('collapse',), # CSS
-             'fields':('url',), }]
+             'fields':('url','user', 'article', 'pid',), }]
     )
 
 class ArticleAdmin(admin.ModelAdmin):
