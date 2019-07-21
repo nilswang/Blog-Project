@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="f51394e3-8203-45f0-90ee-beb9e25af067">
-        <schema name="main" object-types="dataset trigger, table, view, index, column, constraint" />
+        <schema name="main" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -35,18 +35,13 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/blog_comment" />
-      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/blog_ad" />
-      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/auth_user" />
-      <object connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" object-ref="schemas/main/tables/blog_article" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="f51394e3-8203-45f0-90ee-beb9e25af067" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_links" active-filter-id="" />
+    <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_links" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="f51394e3-8203-45f0-90ee-beb9e25af067" dataset="main.blog_user" active-filter-id="6004d7d1-be07-42e7-84cd-df8cf6a606d1">
       <filter id="6004d7d1-be07-42e7-84cd-df8cf6a606d1" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />

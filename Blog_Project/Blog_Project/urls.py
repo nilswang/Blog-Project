@@ -14,16 +14,25 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.conf import settings
-from django.conf.urls import url, include
+from django.conf.urls import url
+from blog.view import *
 from django import views
 from blog.upload import upload_image
+from django.conf import settings
+
 
 
 urlpatterns = [
-    url(r'^admin/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
-    url(r"uploads/(?P<path>.*)$",views.static.serve, {"document_root": settings.MEDIA_ROOT,}),
     url(r'^admin/', admin.site.urls),
-    url(r'', include('blog.urls'))
+    url(r'admin/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
+    url(r"uploads/(?P<path>.*)$", views.static.serve, {"document_root": settings.MEDIA_ROOT, }),
+    url(r'^$', index, name='index'),
+    url(r'^archive/$', archive, name='archive'),
+    url(r'^article/$', article, name='article'),
+    url(r'^comment/post/$', comment_post, name='comment_post'),
+    url(r'^logout$', do_logout, name='logout'),
+    url(r'^reg', do_reg, name='reg'),
+    url(r'^login', do_login, name='login'),
+    url(r'^biaoqian$', biaoqian, name='biaoqian')
 
 ]
